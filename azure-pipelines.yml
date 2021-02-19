@@ -18,7 +18,7 @@
           displayName: Push image
           inputs:
             containerRegistry: |
-              $(dockerHub)
+              $(dockerhubCon)
             repository: $(imageName)
             command: push
             tags: |
