@@ -5,6 +5,7 @@
           vmImage: 'ubuntu-latest' # set to windows-latest or another Windows vmImage for Windows builds
 
         variables:
+          dockerHub: 'dcokerHub'
           imageName: 'pipelines-javascript-docker'
 
         steps:
@@ -18,7 +19,7 @@
           displayName: Push image
           inputs:
             containerRegistry: |
-              $(dockerhubCon)
+              $(dockerHub)
             repository: $(imageName)
             command: push
             tags: |
